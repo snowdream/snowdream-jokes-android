@@ -40,11 +40,11 @@ before_install:
   # environment info
   - gradle -v
 
-  # write gradle.properties
-   - echo $HOME/.gradle/gradle.properties
-  # - wget https://gist.githubusercontent.com/snowdream/8120098/raw/b995fd8ef78499e5b57aa3fd3fb7525545c43687/gradle.properties -O  $HOME/.gradle/gradle.properties
-
 before_script:
+  # write gradle.properties
+  - echo $HOME/.gradle/gradle.properties
+  - wget https://gist.githubusercontent.com/snowdream/8120098/raw/b995fd8ef78499e5b57aa3fd3fb7525545c43687/gradle.properties -O  $HOME/.gradle/gradle.properties
+
   # Create and start emulator
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
