@@ -1,4 +1,5 @@
 #android-gradle-template
+[![Build Status](https://travis-ci.org/SnowdreamFramework/android-gradle-template.svg?branch=master)](https://travis-ci.org/SnowdreamFramework/android-gradle-template)
 
 a template for android with gradle
 
