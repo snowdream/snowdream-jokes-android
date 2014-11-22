@@ -41,7 +41,7 @@ before_install:
   - gradle -v
 
   # write gradle.properties
-   - wget  -P $HOME/.gradle https://gist.githubusercontent.com/snowdream/8120098/raw/b995fd8ef78499e5b57aa3fd3fb7525545c43687/gradle.properties
+   - wget https://gist.githubusercontent.com/snowdream/8120098/raw/b995fd8ef78499e5b57aa3fd3fb7525545c43687/gradle.properties -O  $HOME/.gradle/gradle.properties
 
 before_script:
   # Create and start emulator
