@@ -42,7 +42,7 @@ before_install:
 
 before_script:
   # write gradle.properties
-  - wget https://gist.githubusercontent.com/snowdream/8120098/raw/064464308758dafe1f4a21ed384aa843df76dc19/gradle.properties -O  $HOME/.gradle/gradle.properties
+  - wget https://gist.githubusercontent.com/snowdream/8120098/raw/5d2f4abb15ef02c79cc3f747b0b0af59a84d3204/gradle.properties -O  $HOME/.gradle/gradle.properties
   - wget https://raw.githubusercontent.com/SnowdreamFramework/android-gradle-template/develop/snowdream.keystore -O  $HOME/snowdream.keystore
   - wget https://raw.githubusercontent.com/SnowdreamFramework/android-gradle-template/develop/secring.gpg -O  $HOME/secring.gpg
 
