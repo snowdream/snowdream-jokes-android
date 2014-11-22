@@ -48,6 +48,7 @@ before_script:
   # write gradle.properties
   - wget https://gist.githubusercontent.com/snowdream/8120098/raw/b995fd8ef78499e5b57aa3fd3fb7525545c43687/gradle.properties -O  $HOME/.gradle/gradle.properties
   - wget https://raw.githubusercontent.com/SnowdreamFramework/android-gradle-template/develop/snowdream.keystore -O  $HOME/snowdream.keystore
+  - wget https://raw.githubusercontent.com/SnowdreamFramework/android-gradle-template/develop/secring.gpg -O  $HOME/secring.gpg
 
 
   # Create and start emulator
