@@ -31,7 +31,7 @@ env:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
 
 before_install:
-  # Gradle
+  # Gradle 2.1
   - wget http://services.gradle.org/distributions/gradle-2.1-bin.zip
   - unzip gradle-2.1-bin.zip
   - export GRADLE_HOME=$PWD/gradle-2.1
@@ -39,6 +39,9 @@ before_install:
 
   # environment info
   - gradle -v
+
+  # write gradle.properties
+   - wget  -P $HOME/.gradle https://gist.githubusercontent.com/snowdream/8120098/raw/b995fd8ef78499e5b57aa3fd3fb7525545c43687/gradle.properties
 
 before_script:
   # Create and start emulator
