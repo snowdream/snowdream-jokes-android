@@ -54,4 +54,4 @@ before_script:
   - adb shell input keyevent 82 &
 
 script:
-  - TERM=dumb gradle build connectedCheck
+  - TERM=dumb gradle build connectedCheck --info
