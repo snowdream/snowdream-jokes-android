@@ -36,7 +36,7 @@ before_install:
   - unzip gradle-2.1-bin.zip
   - export GRADLE_HOME=$PWD/gradle-2.1
   - export PATH=$GRADLE_HOME/bin:$PATH
-  - export  KEYSTORE=snowdream.keystore
+  - export  KEYSTORE=$HOME/snowdream.keystore
   - export  KEYSTORE_PASSWORD=1234567
   - export  KEY_ALIAS=snowdream
   - export  KEY_PASSWORD=1234567
@@ -46,8 +46,9 @@ before_install:
 
 before_script:
   # write gradle.properties
-  - echo $HOME/.gradle/gradle.properties
   - wget https://gist.githubusercontent.com/snowdream/8120098/raw/b995fd8ef78499e5b57aa3fd3fb7525545c43687/gradle.properties -O  $HOME/.gradle/gradle.properties
+  - wget https://raw.githubusercontent.com/SnowdreamFramework/android-gradle-template/develop/snowdream.keystore -O  $HOME/snowdream.keystore
+
 
   # Create and start emulator
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
