@@ -36,6 +36,10 @@ before_install:
   - unzip gradle-2.1-bin.zip
   - export GRADLE_HOME=$PWD/gradle-2.1
   - export PATH=$GRADLE_HOME/bin:$PATH
+  - export  KEYSTORE=snowdream.keystore
+  - export  KEYSTORE_PASSWORD=1234567
+  - export  KEY_ALIAS=snowdream
+  - export  KEY_PASSWORD=1234567
 
   # environment info
   - gradle -v
