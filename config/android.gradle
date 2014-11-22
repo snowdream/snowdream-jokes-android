@@ -30,7 +30,7 @@ android {
         targetSdkVersion Integer.parseInt(project.TARGET_SDK_VERSION)
         applicationId project.PACKAGE_NAME
 
-        testApplicationId project.PACKAGE_NAME
+        testApplicationId project.PACKAGE_NAME+".test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
         testHandleProfiling true
         testFunctionalTest true
