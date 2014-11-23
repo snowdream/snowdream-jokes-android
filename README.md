@@ -1,5 +1,6 @@
 #android-gradle-template
 [![Build Status](https://travis-ci.org/SnowdreamFramework/android-gradle-template.svg?branch=master)](https://travis-ci.org/SnowdreamFramework/android-gradle-template)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.snowdream.android.template/library/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.snowdream.android.template/library)
 
 a template for android with gradle
 
