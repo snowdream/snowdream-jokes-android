@@ -43,7 +43,7 @@ before_install:
   - export  KEY_PASSWORD=1234567
 
   # environment info
-  - gradle -v
+  # - gradle -v
 
 before_script:
   # write gradle.properties
