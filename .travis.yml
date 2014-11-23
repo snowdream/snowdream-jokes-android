@@ -1,6 +1,11 @@
 language: android
 jdk: oraclejdk7
 
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+
 android:
   components:
     # Uncomment the lines below if you want to
