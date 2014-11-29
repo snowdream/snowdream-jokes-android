@@ -14,7 +14,7 @@ android:
     # - tools
 
     # The BuildTools version used by your project
-    - build-tools-21.0.2
+    - build-tools-21.1.1
 
     # The SDK version used to compile your project
     - android-21
@@ -32,10 +32,10 @@ android:
     - sys-img-x86-android-21
 
 before_install:
-  # Gradle 2.1
-  - wget http://services.gradle.org/distributions/gradle-2.1-bin.zip
-  - unzip gradle-2.1-bin.zip
-  - export GRADLE_HOME=$PWD/gradle-2.1
+  # Gradle 2.2.1
+  - wget http://services.gradle.org/distributions/gradle-2.2.1-all.zip
+  - unzip gradle-2.2.1-all.zip
+  - export GRADLE_HOME=$PWD/gradle-2.2.1
   - export PATH=$GRADLE_HOME/bin:$PATH
   - export  KEYSTORE=$HOME/snowdream.keystore
   - export  KEYSTORE_PASSWORD=1234567
