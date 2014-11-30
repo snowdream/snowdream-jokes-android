@@ -33,8 +33,8 @@ android:
 
 before_install:
   # Gradle 2.2.1
-  - wget http://services.gradle.org/distributions/gradle-2.2.1-all.zip
-  - unzip gradle-2.2.1-all.zip
+  - wget http://services.gradle.org/distributions/gradle-2.2.1-bin.zip
+  - unzip gradle-2.2.1-bin.zip
   - export GRADLE_HOME=$PWD/gradle-2.2.1
   - export PATH=$GRADLE_HOME/bin:$PATH
   - export  KEYSTORE=$HOME/snowdream.keystore
