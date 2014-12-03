@@ -1,7 +1,8 @@
 #android-gradle-template
 [![Build Status](https://travis-ci.org/SnowdreamFramework/android-gradle-template.svg?branch=master)](https://travis-ci.org/SnowdreamFramework/android-gradle-template)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.snowdream.android.template/library/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.snowdream.android.template/library)
-
+[![GITHUB](https://img.shields.io/github/issues/badges/android-gradle-template.svg)](https://github.com/SnowdreamFramework/android-gradle-template/issues)
+[![LICENSE](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 [![Pledgie](https://pledgie.com/campaigns/27475.png)](https://pledgie.com/campaigns/27475)
 
