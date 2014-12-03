@@ -15,8 +15,8 @@ a template for android with gradle
 * Configuring the build environment via gradle.properties
 
 ##Requirements
-* Gradle 1.10, 1.11 or 1.12 with the plugin 0.12.2
-* SDK with Build Tools 19.1+. Some features may require a more recent version.
+* Gradle 2.2.1 with the plugin 1.0.0-rc1
+* SDK with Build Tools 21.1.1
 
 ##HOW TO
 Learn how to develop with IntelliJ/Android Studio and Gradle.
