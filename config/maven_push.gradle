@@ -100,7 +100,7 @@ afterEvaluate { project ->
     }
 
     task androidReleaseJar(type: Jar, dependsOn: assembleRelease) {
-        from "$buildDir/classes/release/"
+        from "$buildDir/intermediates/classes/release/"
     }
 
     task androidJavadocsJar(type: Jar) {
