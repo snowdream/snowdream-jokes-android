@@ -65,16 +65,16 @@ android {
 }
 
 android.applicationVariants.all { variant ->
-    def apk = variant.packageApplication.outputFile;
+    def apk = variant.outputs[0].outputFile;
     def newName = "";
 
     newName = apk.name.replace(project.name, POM_NAME + "-v" + android.defaultConfig.versionName);
     newName = newName.replace("-" + variant.buildType.name, "");
     newName = newName.replace(".apk", "-" + variant.buildType.name.toLowerCase() + ".apk");
 
-    variant.packageApplication.outputFile = new File(apk.parentFile, newName);
-    if (variant.zipAlign) {
-        variant.zipAlign.outputFile = new File(apk.parentFile, newName.replace("-unaligned", ""));
+    variant.outputs[0].outputFile = new File(apk.parentFile, newName);
+    if (variant.outputs[0].zipAlign) {
+        variant.outputs[0].zipAlign.outputFile = new File(apk.parentFile, newName.replace("-unaligned", ""));
     }
 }
 
