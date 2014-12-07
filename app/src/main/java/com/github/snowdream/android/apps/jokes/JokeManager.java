@@ -1,12 +1,12 @@
 package com.github.snowdream.android.apps.jokes;
 
+import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.loopj.android.http.*;
 
 /**
  * Created by hui.yang on 2014/12/7.
