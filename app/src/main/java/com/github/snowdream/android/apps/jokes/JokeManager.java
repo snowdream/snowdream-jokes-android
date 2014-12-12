@@ -18,7 +18,7 @@ public class JokeManager {
     public static void getJokes(final CallBack callBack){
         List<Joke> list = null;
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get("http://git.oschina.net/yanghui1986527/snowdream-jokes-android/raw/develop/docs/test/jokes.json", new JsonHttpResponseHandler() {
+        client.get("https://raw.githubusercontent.com/snowdream/snowdream-jokes-android/master/docs/test/jokes.json", new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 List<Joke> list =  parseJokes(response);
