@@ -1,5 +1,7 @@
 package com.github.snowdream.android.apps.jokes;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
 import org.apache.http.Header;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +29,11 @@ public class JokeManager {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
             }
         });
     }

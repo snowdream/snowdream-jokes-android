@@ -25,6 +25,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.github.snowdream.android.util.Log;
+
+import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -43,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -56,6 +59,14 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            JokeManager.getJokes(new CallBack() {
+                @Override
+                public void callback(List<Joke> jokes) {
+                    if (jokes != null) {
+                        Log.i(jokes.toString());
+                    }
+                }
+            });
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -71,9 +82,14 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
         }
     }
 
