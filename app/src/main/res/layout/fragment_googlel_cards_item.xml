@@ -30,15 +30,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:textSize="14sp"
+            android:textSize="18sp"
+            tools:text="很多年后的同学会上，酒过几巡。对当年暗恋的同学说：“你知道为什么以前每个下课，我总是找你问问题吗？”大伙儿哄堂大笑，等着看她脸红。她平淡地看了我一眼，抿了抿嘴角道：“那你想过没有，为什么我总是会在座位上，而不出去玩呢？ ” … …有些美好的东西，总于指尖悄然逝去"
             android:textColor="?android:attr/textColorSecondary"
             tools:ignore="UnusedAttribute" />
 
     <ImageView
             android:id="@+id/imageview_googlecards_card"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
+            tools:background="@drawable/ic_launcher"
             tools:ignore="ContentDescription" />
 
 </LinearLayout>
