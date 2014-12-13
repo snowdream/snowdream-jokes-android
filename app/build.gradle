@@ -26,6 +26,7 @@ dependencies {
     compile 'com.nhaarman.listviewanimations:lib-core:3.1.0@aar'
     compile 'com.nhaarman.listviewanimations:lib-manipulation:3.1.0@aar'
     compile 'com.nhaarman.listviewanimations:lib-core-slh:3.1.0@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile "org.parceler:parceler-api:0.2.15"
     provided "org.parceler:parceler:0.2.15"

@@ -73,6 +73,8 @@ public class GoogleCardsAdapter extends ArrayAdapter<Joke> {
                 }else{
                     holder.imageView.setVisibility(View.GONE);
                 }
+            }else{
+                holder.imageView.setVisibility(View.GONE);
             }
         }
         return view;

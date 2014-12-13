@@ -23,6 +23,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import com.nhaarman.listviewanimations.appearance.simple.SwingBottomInAnimationAdapter;
+import com.nhaarman.listviewanimations.itemmanipulation.swipedismiss.OnDismissCallback;
+import com.nhaarman.listviewanimations.itemmanipulation.swipedismiss.SwipeDismissAdapter;
 import org.parceler.Parcels;
 
 import java.util.List;
@@ -30,9 +33,10 @@ import java.util.List;
 /**
  * Created by hui.yang on 2014/12/14.
  */
-public class GoogleCardsFragment extends Fragment {
+public class GoogleCardsFragment extends Fragment{
     private GoogleCardsAdapter mGoogleCardsAdapter = null;
     private  ListView listView = null;
+    private static final int INITIAL_DELAY_MILLIS = 300;
 
     public GoogleCardsFragment() {
     }
@@ -51,6 +55,13 @@ public class GoogleCardsFragment extends Fragment {
         List<Joke> jokes = Parcels.unwrap(bundle.getParcelable("jokes")) ;
         mGoogleCardsAdapter = new GoogleCardsAdapter(getActivity());
         mGoogleCardsAdapter.addAll(jokes);
+
+        SwingBottomInAnimationAdapter swingBottomInAnimationAdapter = new SwingBottomInAnimationAdapter(mGoogleCardsAdapter);
+        swingBottomInAnimationAdapter.setAbsListView(listView);
+
+        swingBottomInAnimationAdapter.getViewAnimator().setInitialDelayMillis(INITIAL_DELAY_MILLIS);
+
+        listView.setAdapter(swingBottomInAnimationAdapter);
         listView.setAdapter(mGoogleCardsAdapter);
 
         return rootView;
@@ -60,4 +71,5 @@ public class GoogleCardsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+    
 }
