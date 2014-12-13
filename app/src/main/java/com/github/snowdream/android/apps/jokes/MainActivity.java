@@ -17,30 +17,21 @@
 package com.github.snowdream.android.apps.jokes;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import com.github.snowdream.android.util.Log;
+import org.parceler.Parcels;
 
 import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
+    private  GoogleCardsFragment googleCardsFragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
-        }
     }
 
 
@@ -63,7 +54,18 @@ public class MainActivity extends ActionBarActivity {
                 @Override
                 public void callback(List<Joke> jokes) {
                     if (jokes != null) {
-                        Log.i(jokes.toString());
+                        googleCardsFragment = new GoogleCardsFragment();
+
+                        Bundle bundle = new Bundle();
+                        bundle.putParcelable("jokes",Parcels.wrap(jokes));
+                        googleCardsFragment.setArguments(bundle);
+
+                        //if (savedInstanceState == null) {
+                            getSupportFragmentManager().beginTransaction()
+                                    .add(R.id.container, googleCardsFragment)
+                                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                                    .commit();
+                       // }
                     }
                 }
             });
@@ -71,26 +73,4 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-        }
-    }
-
-}
+ }
