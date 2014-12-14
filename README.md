@@ -3,6 +3,8 @@
 [![GITHUB](https://img.shields.io/github/issues/badges/snowdream-jokes-android.svg)](https://github.com/snowdream/snowdream-jokes-android/issues)
 [![LICENSE](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
+##Preview
+[![雪梦九段android客户端](https://raw.githubusercontent.com/snowdream/snowdream-jokes-android/master/docs/preview/device-2014-12-14-165348.png)](https://play.google.com/store/apps/details?id=com.github.snowdream.android.apps.jokes)
 
 ##License
 ```
