@@ -15,3 +15,12 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class se.emilsjolander.stickylistheaders.** { *; }
+-keep interface se.emilsjolander.stickylistheaders.** { *; }
+-keep class com.nhaarman.listviewanimations.** { *; }
+-keep class com.nineoldandroids.** { *; }
+-keep class com.nostra13.universalimageloader.** { *; }
+-keep class org.parceler.** { *; }
+-keep class com.loopj.android.** { *; }
+

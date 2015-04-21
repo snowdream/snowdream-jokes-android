@@ -1,5 +1,4 @@
 #雪梦九段android客户端
-[![Build Status](https://travis-ci.org/snowdream/snowdream-jokes-android.svg?branch=master)](https://travis-ci.org/snowdream/snowdream-jokes-android)
 [![GITHUB](https://img.shields.io/github/issues/badges/snowdream-jokes-android.svg)](https://github.com/snowdream/snowdream-jokes-android/issues)
 [![LICENSE](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
